@@ -60,7 +60,7 @@ public class PlayerController {
 		return p;
 	}
 
-	@DeleteMapping("/players")
+	@DeleteMapping("/players/{id}")
 	public String deletePlayer(@PathVariable("id") int id) {
 		Player p = playerService.showPlayer(id);
 
@@ -81,4 +81,5 @@ public class PlayerController {
 		playerService.addPlayer(p);
 
 	}
+
 }
